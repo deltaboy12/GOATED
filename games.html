@@ -1,16 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Games</title>
-<link rel="stylesheet" href="style.css">
+<title>Ultimate Game Stash</title>
+
+<style>
+
+body{
+  background:#0f0f0f;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+}
+
+h1{
+  margin-top:20px;
+}
+
+#gameFrame{
+  width:900px;
+  height:500px;
+  border:none;
+  margin-top:20px;
+  border-radius:10px;
+}
+
+.games{
+  margin-top:20px;
+}
+
+button{
+  margin:5px;
+  padding:10px;
+  background:#222;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+button:hover{
+  background:#444;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>🎮 Games</h1>
-<p>My games will go here.</p>
+<h1>🎮 Ultimate Game Stash</h1>
 
-<a href="index.html">Back to Home</a>
+<a href="index.html" style="color:cyan;">⬅ Back</a>
+
+<br>
+
+<iframe id="gameFrame" src=""></iframe>
+
+<div class="games">
+
+<button onclick="loadGame('https://ubg100.github.io/run/')">Run</button>
+<button onclick="loadGame('https://ubg100.github.io/run-3/')">Run 3</button>
+<button onclick="loadGame('https://ubg100.github.io/slope/')">Slope</button>
+<button onclick="loadGame('https://ubg100.github.io/2048/')">2048</button>
+<button onclick="loadGame('https://ubg100.github.io/ducklife/')">Duck Life</button>
+<button onclick="loadGame('https://ubg100.github.io/bloxorz/')">Bloxorz</button>
+<button onclick="loadGame('https://ubg100.github.io/worlds-hardest-game/')">Worlds Hardest Game</button>
+<button onclick="loadGame('https://ubg100.github.io/basketball-stars/')">Basketball Stars</button>
+<button onclick="loadGame('https://ubg100.github.io/retro-bowl/')">Retro Bowl</button>
+<button onclick="loadGame('https://ubg100.github.io/drift-boss/')">Drift Boss</button>
+
+<button onclick="loadGame('https://ubg100.github.io/tetris/')">Tetris</button>
+<button onclick="loadGame('https://ubg100.github.io/pacman/')">Pacman</button>
+<button onclick="loadGame('https://ubg100.github.io/flappy-bird/')">Flappy Bird</button>
+<button onclick="loadGame('https://ubg100.github.io/crossy-road/')">Crossy Road</button>
+<button onclick="loadGame('https://ubg100.github.io/snake/')">Snake</button>
+<button onclick="loadGame('https://ubg100.github.io/spacebar-clicker/')">Spacebar Clicker</button>
+<button onclick="loadGame('https://ubg100.github.io/tunnel-rush/')">Tunnel Rush</button>
+<button onclick="loadGame('https://ubg100.github.io/moto-x3m/')">Moto X3M</button>
+<button onclick="loadGame('https://ubg100.github.io/fireboy-watergirl/')">Fireboy & Watergirl</button>
+<button onclick="loadGame('https://ubg100.github.io/stickman-hook/')">Stickman Hook</button>
+
+<button onclick="loadGame('https://ubg100.github.io/tiny-fishing/')">Tiny Fishing</button>
+<button onclick="loadGame('https://ubg100.github.io/paper-io/')">Paper.io</button>
+<button onclick="loadGame('https://ubg100.github.io/basket-random/')">Basket Random</button>
+<button onclick="loadGame('https://ubg100.github.io/soccer-random/')">Soccer Random</button>
+<button onclick="loadGame('https://ubg100.github.io/ovo/')">OvO</button>
+<button onclick="loadGame('https://ubg100.github.io/drive-mad/')">Drive Mad</button>
+<button onclick="loadGame('https://ubg100.github.io/getaway-shootout/')">Getaway Shootout</button>
+<button onclick="loadGame('https://ubg100.github.io/among-us/')">Among Us</button>
+<button onclick="loadGame('https://ubg100.github.io/minecraft-classic/')">Minecraft Classic</button>
+<button onclick="loadGame('https://ubg100.github.io/geometry-dash/')">Geometry Dash</button>
+
+<button onclick="loadGame('https://ubg100.github.io/stack/')">Stack</button>
+<button onclick="loadGame('https://ubg100.github.io/fruit-ninja/')">Fruit Ninja</button>
+<button onclick="loadGame('https://ubg100.github.io/slope-2/')">Slope 2</button>
+<button onclick="loadGame('https://ubg100.github.io/run-2/')">Run 2</button>
+<button onclick="loadGame('https://ubg100.github.io/baldis-basics/')">Baldi's Basics</button>
+<button onclick="loadGame('https://ubg100.github.io/happy-wheels/')">Happy Wheels</button>
+<button onclick="loadGame('https://ubg100.github.io/fnaf/')">FNAF</button>
+<button onclick="loadGame('https://ubg100.github.io/superhot/')">SuperHot</button>
+<button onclick="loadGame('https://ubg100.github.io/rooftop-snipers/')">Rooftop Snipers</button>
+<button onclick="loadGame('https://ubg100.github.io/subway-surfers/')">Subway Surfers</button>
+
+<button onclick="loadGame('https://ubg100.github.io/temple-run/')">Temple Run</button>
+<button onclick="loadGame('https://ubg100.github.io/bitlife/')">BitLife</button>
+<button onclick="loadGame('https://ubg100.github.io/pixel-gun/')">Pixel Gun</button>
+<button onclick="loadGame('https://ubg100.github.io/slither-io/')">Slither.io</button>
+<button onclick="loadGame('https://ubg100.github.io/tank-trouble/')">Tank Trouble</button>
+<button onclick="loadGame('https://ubg100.github.io/stick-war/')">Stick War</button>
+<button onclick="loadGame('https://ubg100.github.io/learn-to-fly/')">Learn to Fly</button>
+<button onclick="loadGame('https://ubg100.github.io/age-of-war/')">Age of War</button>
+<button onclick="loadGame('https://ubg100.github.io/bad-ice-cream/')">Bad Ice Cream</button>
+<button onclick="loadGame('https://ubg100.github.io/super-mario/')">Super Mario</button>
+
+</div>
+
+<script>
+
+function loadGame(url){
+document.getElementById("gameFrame").src = url;
+}
+
+</script>
 
 </body>
 </html>
