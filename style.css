@@ -1,0 +1,17 @@
+body{
+  background:#111;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+}
+
+.menu img{
+  width:80px;
+  margin:20px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.menu img:hover{
+  transform:scale(1.3);
+}
