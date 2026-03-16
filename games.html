@@ -1,124 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ultimate Game Stash</title>
+<title>Ultimate Game Portal</title>
 
 <style>
 
 body{
-  background:#0f0f0f;
-  color:white;
-  font-family:Arial;
-  text-align:center;
+background:#0f0f0f;
+color:white;
+font-family:Arial;
+text-align:center;
 }
 
 h1{
-  margin-top:20px;
+margin-top:20px;
 }
 
 #gameFrame{
-  width:900px;
-  height:500px;
-  border:none;
-  margin-top:20px;
-  border-radius:10px;
+width:900px;
+height:500px;
+border:none;
+margin-top:20px;
+border-radius:10px;
+}
+
+#search{
+padding:10px;
+width:300px;
+margin-top:20px;
+border-radius:5px;
+border:none;
 }
 
 .games{
-  margin-top:20px;
+display:grid;
+grid-template-columns:repeat(auto-fill,120px);
+gap:15px;
+justify-content:center;
+margin-top:30px;
 }
 
-button{
-  margin:5px;
-  padding:10px;
-  background:#222;
-  color:white;
-  border:none;
-  cursor:pointer;
-  border-radius:5px;
+.game{
+cursor:pointer;
+background:#1a1a1a;
+padding:10px;
+border-radius:10px;
+transition:0.2s;
 }
 
-button:hover{
-  background:#444;
+.game:hover{
+background:#333;
+transform:scale(1.1);
+}
+
+.game img{
+width:100px;
+height:100px;
+border-radius:8px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<h1>🎮 Ultimate Game Stash</h1>
+<h1>🎮 Ultimate Game Portal</h1>
 
 <a href="index.html" style="color:cyan;">⬅ Back</a>
 
 <br>
 
-<iframe id="gameFrame" src=""></iframe>
+<input id="search" placeholder="Search games...">
 
-<div class="games">
+<br>
 
-<button onclick="loadGame('https://ubg100.github.io/run/')">Run</button>
-<button onclick="loadGame('https://ubg100.github.io/run-3/')">Run 3</button>
-<button onclick="loadGame('https://ubg100.github.io/slope/')">Slope</button>
-<button onclick="loadGame('https://ubg100.github.io/2048/')">2048</button>
-<button onclick="loadGame('https://ubg100.github.io/ducklife/')">Duck Life</button>
-<button onclick="loadGame('https://ubg100.github.io/bloxorz/')">Bloxorz</button>
-<button onclick="loadGame('https://ubg100.github.io/worlds-hardest-game/')">Worlds Hardest Game</button>
-<button onclick="loadGame('https://ubg100.github.io/basketball-stars/')">Basketball Stars</button>
-<button onclick="loadGame('https://ubg100.github.io/retro-bowl/')">Retro Bowl</button>
-<button onclick="loadGame('https://ubg100.github.io/drift-boss/')">Drift Boss</button>
+<iframe id="gameFrame"></iframe>
 
-<button onclick="loadGame('https://ubg100.github.io/tetris/')">Tetris</button>
-<button onclick="loadGame('https://ubg100.github.io/pacman/')">Pacman</button>
-<button onclick="loadGame('https://ubg100.github.io/flappy-bird/')">Flappy Bird</button>
-<button onclick="loadGame('https://ubg100.github.io/crossy-road/')">Crossy Road</button>
-<button onclick="loadGame('https://ubg100.github.io/snake/')">Snake</button>
-<button onclick="loadGame('https://ubg100.github.io/spacebar-clicker/')">Spacebar Clicker</button>
-<button onclick="loadGame('https://ubg100.github.io/tunnel-rush/')">Tunnel Rush</button>
-<button onclick="loadGame('https://ubg100.github.io/moto-x3m/')">Moto X3M</button>
-<button onclick="loadGame('https://ubg100.github.io/fireboy-watergirl/')">Fireboy & Watergirl</button>
-<button onclick="loadGame('https://ubg100.github.io/stickman-hook/')">Stickman Hook</button>
-
-<button onclick="loadGame('https://ubg100.github.io/tiny-fishing/')">Tiny Fishing</button>
-<button onclick="loadGame('https://ubg100.github.io/paper-io/')">Paper.io</button>
-<button onclick="loadGame('https://ubg100.github.io/basket-random/')">Basket Random</button>
-<button onclick="loadGame('https://ubg100.github.io/soccer-random/')">Soccer Random</button>
-<button onclick="loadGame('https://ubg100.github.io/ovo/')">OvO</button>
-<button onclick="loadGame('https://ubg100.github.io/drive-mad/')">Drive Mad</button>
-<button onclick="loadGame('https://ubg100.github.io/getaway-shootout/')">Getaway Shootout</button>
-<button onclick="loadGame('https://ubg100.github.io/among-us/')">Among Us</button>
-<button onclick="loadGame('https://ubg100.github.io/minecraft-classic/')">Minecraft Classic</button>
-<button onclick="loadGame('https://ubg100.github.io/geometry-dash/')">Geometry Dash</button>
-
-<button onclick="loadGame('https://ubg100.github.io/stack/')">Stack</button>
-<button onclick="loadGame('https://ubg100.github.io/fruit-ninja/')">Fruit Ninja</button>
-<button onclick="loadGame('https://ubg100.github.io/slope-2/')">Slope 2</button>
-<button onclick="loadGame('https://ubg100.github.io/run-2/')">Run 2</button>
-<button onclick="loadGame('https://ubg100.github.io/baldis-basics/')">Baldi's Basics</button>
-<button onclick="loadGame('https://ubg100.github.io/happy-wheels/')">Happy Wheels</button>
-<button onclick="loadGame('https://ubg100.github.io/fnaf/')">FNAF</button>
-<button onclick="loadGame('https://ubg100.github.io/superhot/')">SuperHot</button>
-<button onclick="loadGame('https://ubg100.github.io/rooftop-snipers/')">Rooftop Snipers</button>
-<button onclick="loadGame('https://ubg100.github.io/subway-surfers/')">Subway Surfers</button>
-
-<button onclick="loadGame('https://ubg100.github.io/temple-run/')">Temple Run</button>
-<button onclick="loadGame('https://ubg100.github.io/bitlife/')">BitLife</button>
-<button onclick="loadGame('https://ubg100.github.io/pixel-gun/')">Pixel Gun</button>
-<button onclick="loadGame('https://ubg100.github.io/slither-io/')">Slither.io</button>
-<button onclick="loadGame('https://ubg100.github.io/tank-trouble/')">Tank Trouble</button>
-<button onclick="loadGame('https://ubg100.github.io/stick-war/')">Stick War</button>
-<button onclick="loadGame('https://ubg100.github.io/learn-to-fly/')">Learn to Fly</button>
-<button onclick="loadGame('https://ubg100.github.io/age-of-war/')">Age of War</button>
-<button onclick="loadGame('https://ubg100.github.io/bad-ice-cream/')">Bad Ice Cream</button>
-<button onclick="loadGame('https://ubg100.github.io/super-mario/')">Super Mario</button>
-
-</div>
+<div class="games" id="gameList"></div>
 
 <script>
 
-function loadGame(url){
-document.getElementById("gameFrame").src = url;
+const games = [
+
+{name:"Run",url:"https://ubg100.github.io/run/",icon:"https://img.icons8.com/fluency/96/running.png"},
+{name:"Run 3",url:"https://ubg100.github.io/run-3/",icon:"https://img.icons8.com/fluency/96/running.png"},
+{name:"Slope",url:"https://ubg100.github.io/slope/",icon:"https://img.icons8.com/fluency/96/controller.png"},
+{name:"2048",url:"https://ubg100.github.io/2048/",icon:"https://img.icons8.com/fluency/96/numbered-list.png"},
+{name:"Drift Boss",url:"https://ubg100.github.io/drift-boss/",icon:"https://img.icons8.com/fluency/96/racing-flag.png"},
+{name:"Basketball Stars",url:"https://ubg100.github.io/basketball-stars/",icon:"https://img.icons8.com/fluency/96/basketball.png"},
+{name:"Retro Bowl",url:"https://ubg100.github.io/retro-bowl/",icon:"https://img.icons8.com/fluency/96/american-football.png"},
+{name:"Moto X3M",url:"https://ubg100.github.io/moto-x3m/",icon:"https://img.icons8.com/fluency/96/motorcycle.png"},
+{name:"Tunnel Rush",url:"https://ubg100.github.io/tunnel-rush/",icon:"https://img.icons8.com/fluency/96/controller.png"},
+{name:"Stickman Hook",url:"https://ubg100.github.io/stickman-hook/",icon:"https://img.icons8.com/fluency/96/stick-figure.png"},
+
+{name:"Crossy Road",url:"https://ubg100.github.io/crossy-road/",icon:"https://img.icons8.com/fluency/96/chicken.png"},
+{name:"Flappy Bird",url:"https://ubg100.github.io/flappy-bird/",icon:"https://img.icons8.com/fluency/96/bird.png"},
+{name:"Snake",url:"https://ubg100.github.io/snake/",icon:"https://img.icons8.com/fluency/96/snake.png"},
+{name:"Tiny Fishing",url:"https://ubg100.github.io/tiny-fishing/",icon:"https://img.icons8.com/fluency/96/fishing.png"},
+{name:"Paper.io",url:"https://ubg100.github.io/paper-io/",icon:"https://img.icons8.com/fluency/96/paper.png"},
+{name:"Drive Mad",url:"https://ubg100.github.io/drive-mad/",icon:"https://img.icons8.com/fluency/96/car.png"},
+{name:"OvO",url:"https://ubg100.github.io/ovo/",icon:"https://img.icons8.com/fluency/96/controller.png"},
+{name:"Basket Random",url:"https://ubg100.github.io/basket-random/",icon:"https://img.icons8.com/fluency/96/basketball.png"},
+{name:"Soccer Random",url:"https://ubg100.github.io/soccer-random/",icon:"https://img.icons8.com/fluency/96/soccer-ball.png"},
+{name:"Fireboy Watergirl",url:"https://ubg100.github.io/fireboy-watergirl/",icon:"https://img.icons8.com/fluency/96/fire-element.png"},
+
+{name:"Minecraft Classic",url:"https://ubg100.github.io/minecraft-classic/",icon:"https://img.icons8.com/fluency/96/minecraft-logo.png"},
+{name:"Geometry Dash",url:"https://ubg100.github.io/geometry-dash/",icon:"https://img.icons8.com/fluency/96/square.png"},
+{name:"Stack",url:"https://ubg100.github.io/stack/",icon:"https://img.icons8.com/fluency/96/stack.png"},
+{name:"Fruit Ninja",url:"https://ubg100.github.io/fruit-ninja/",icon:"https://img.icons8.com/fluency/96/watermelon.png"},
+{name:"Run 2",url:"https://ubg100.github.io/run-2/",icon:"https://img.icons8.com/fluency/96/running.png"},
+{name:"Slope 2",url:"https://ubg100.github.io/slope-2/",icon:"https://img.icons8.com/fluency/96/controller.png"},
+{name:"Tank Trouble",url:"https://ubg100.github.io/tank-trouble/",icon:"https://img.icons8.com/fluency/96/tank.png"},
+{name:"Stick War",url:"https://ubg100.github.io/stick-war/",icon:"https://img.icons8.com/fluency/96/sword.png"},
+{name:"Age of War",url:"https://ubg100.github.io/age-of-war/",icon:"https://img.icons8.com/fluency/96/castle.png"},
+{name:"Learn to Fly",url:"https://ubg100.github.io/learn-to-fly/",icon:"https://img.icons8.com/fluency/96/penguin.png"}
+
+];
+
+const list = document.getElementById("gameList");
+
+function showGames(filter=""){
+list.innerHTML="";
+games
+.filter(g=>g.name.toLowerCase().includes(filter.toLowerCase()))
+.forEach(game=>{
+const div=document.createElement("div");
+div.className="game";
+div.innerHTML=`<img src="${game.icon}"><br>${game.name}`;
+div.onclick=()=>{document.getElementById("gameFrame").src=game.url};
+list.appendChild(div);
+});
 }
+
+showGames();
+
+document.getElementById("search").addEventListener("input",e=>{
+showGames(e.target.value);
+});
 
 </script>
 
