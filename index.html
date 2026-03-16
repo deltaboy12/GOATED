@@ -1,68 +1,25 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-<title>GOATED</title>
 
-<style>
+<title>GOATED 👑</title>
 
-body{
-background:black;
-color:white;
-font-family:Arial;
-text-align:center;
-}
-
-h1{
-color:gold;
-font-size:60px;
-}
-
-iframe{
-width:900px;
-height:500px;
-border:3px solid gold;
-margin-top:20px;
-}
-
-button{
-background:gold;
-color:black;
-padding:10px 15px;
-margin:5px;
-border:none;
-font-weight:bold;
-cursor:pointer;
-}
-
-button:hover{
-background:white;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<h1>👑 GOATED</h1>
+<h1 class="logo">👑 GOATED</h1>
 
-<iframe id="gameFrame"></iframe>
+<input id="search" placeholder="Search games...">
 
-<br>
+<iframe id="player"></iframe>
 
-<button onclick="play('https://ubg100.github.io/run/')">Run</button>
-<button onclick="play('https://ubg100.github.io/run-3/')">Run 3</button>
-<button onclick="play('https://ubg100.github.io/slope/')">Slope</button>
-<button onclick="play('https://ubg100.github.io/2048/')">2048</button>
-<button onclick="play('https://ubg100.github.io/drift-boss/')">Drift Boss</button>
+<div id="games"></div>
 
-<script>
-
-function play(url){
-document.getElementById("gameFrame").src=url;
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
